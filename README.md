@@ -29,6 +29,10 @@
 
 2. Add link to <b>"Plugins/PawnCSW.dll"</b>
 
+## Pay Attention!
+
+* In Callback, arguments are passed backwards.
+
 ### Example (Unity)
 
 ```CS

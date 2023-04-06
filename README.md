@@ -32,7 +32,7 @@
 ### Example (Unity)
 
 ```CS
-public AMX amx;
+    public AMX amx;
 
     static Native[] natives = new Native[]
     {

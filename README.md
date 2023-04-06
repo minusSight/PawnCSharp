@@ -19,15 +19,15 @@
 
 1. Extract archive to any folder
 
-2. All files from <b>"Plugins"</b> folder put into "Assets/Plugins/"
+2. All files from <b>"Plugins"</b> folder put into <b>"Assets/Plugins/"</b>
 
-3. All files from <b>"AMX"</b> folder put into "Assets/Scripts/"
+3. All files from <b>"AMX"</b> folder put into <b>"Assets/Scripts/"</b>
 
 ### Installation (Visual Studio)
 
 1. Extract archive to solution folder
 
-2. Add link to <b>Plugins/PawnCSW.dll</b>
+2. Add link to <b>"Plugins/PawnCSW.dll"</b>
 
 ### Example (Unity)
 

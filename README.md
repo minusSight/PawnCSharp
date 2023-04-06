@@ -19,9 +19,9 @@
 
 1. Extract archive to any folder
 
-2. All files from <b>Plugins</b> folder put into Assets/Plugins/
+2. All files from <b>"Plugins"</b> folder put into "Assets/Plugins/"
 
-3. All files from <b>AMX</b> folder put into Assets/Scripts/
+3. All files from <b>"AMX"</b> folder put into "Assets/Scripts/"
 
 ### Installation (Visual Studio)
 

@@ -31,7 +31,7 @@
 
 ## Pay Attention!
 
-* In Callback, arguments are passed backwards.
+* In callbacks, arguments must be pushed in reverse order.
 
 ### Example (Unity)
 

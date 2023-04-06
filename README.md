@@ -112,6 +112,59 @@
     }
 ```
 
+## .pwn File
+
+```Pawn
+#include <core>
+#include <string>
+
+#define DIALOG_STYLE_MSGBOX 0
+#define DIALOG_STYLE_INPUT 1
+
+native log(str[]);
+native ShowDialog(dialogid, style, header[], info[], button1[], button2[]);
+native Quit();
+
+main() {
+	log("Hello World! Привет мир!");
+}
+
+forward OnGameStart();
+public OnGameStart()
+{
+	ShowDialog(0, DIALOG_STYLE_MSGBOX, "Hello", "This is PawnCSharp interpreter demo.\nDo you like it?", "Äà", "Íåò");
+}
+
+forward OnDialogResponse(dialogid, response, inputtext[]);
+public OnDialogResponse(dialogid, response, inputtext[])
+{
+	switch(dialogid)
+	{
+		case 0:
+		{
+		    if(response) ShowDialog(1, DIALOG_STYLE_INPUT, "Cool!", "Enter username in window below:", "Next", "Exit");
+		    else ShowDialog(2, DIALOG_STYLE_MSGBOX, "Very sad.", "Goodbye!.", "Exit", "");
+		}
+		case 2:
+		{
+			if(response) Quit();
+		}
+		case 1:
+		{
+		    if(response)
+		    {
+		    	if(!strlen(inputtext)) return ShowDialog(1, DIALOG_STYLE_INPUT, "Cool!", "Enter username in window below:", "Next", "Exit");
+		    	if(strlen(inputtext) < 2 || strlen(inputtext) > 32) return ShowDialog(1, DIALOG_STYLE_INPUT, "Cool!", "<color=red>Username length from 2 to 32 symbols!", "Next", "Exit");
+		        new string[256];
+		        format(string, sizeof(string), "Hi, <color=red>%s</color>.", inputtext);
+		        ShowDialog(2, DIALOG_STYLE_MSGBOX, "Hi!", string, "Hi", "");
+		    }
+		}
+	}
+	return 0;
+}
+```
+
 ## License
 
 Distributed under the MIT License. See [LICENSE](https://github.com/minusSight/PawnCSharp/blob/main/LICENSE.md) for more information.
